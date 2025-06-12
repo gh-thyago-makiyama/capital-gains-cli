@@ -1,6 +1,6 @@
 package com.capitalgainscli.processor.command
 
-enum class Operation() {
+enum class Operation {
     BUY,
     SELL;
 

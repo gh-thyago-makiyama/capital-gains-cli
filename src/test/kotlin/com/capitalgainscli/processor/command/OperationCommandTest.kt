@@ -2,10 +2,10 @@ package com.capitalgainscli.processor.command
 
 import com.capitalgainscli.dtos.OperationInput
 import com.capitalgainscli.processor.CapitalGainsProcessor
-import java.math.BigDecimal
-import kotlin.test.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
+import java.math.BigDecimal
+import kotlin.test.assertTrue
 
 class OperationCommandTest {
     @Test

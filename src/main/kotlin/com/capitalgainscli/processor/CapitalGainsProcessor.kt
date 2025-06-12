@@ -3,9 +3,9 @@ package com.capitalgainscli.processor
 import com.capitalgainscli.dtos.OperationInput
 import com.capitalgainscli.dtos.TaxResult
 import com.capitalgainscli.processor.command.OperationCommand
+import com.capitalgainscli.utils.Mapper.ZERO
 import java.math.BigDecimal
 import java.math.RoundingMode
-import com.capitalgainscli.utils.Mapper.ZERO
 
 class CapitalGainsProcessor {
     private var totalQuantity = 0
@@ -26,9 +26,11 @@ class CapitalGainsProcessor {
     fun updateBuy(quantity: Int, cost: BigDecimal) {
         val totalCost = averageCost.multiply(BigDecimal(totalQuantity)) + cost.multiply(BigDecimal(quantity))
         totalQuantity += quantity
-        averageCost = if (totalQuantity > 0)
+        averageCost = if (totalQuantity > 0) {
             totalCost.divide(BigDecimal(totalQuantity), 2, RoundingMode.HALF_EVEN)
-        else ZERO
+        } else {
+            ZERO
+        }
     }
 
     fun registerSell(quantity: Int) {

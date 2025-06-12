@@ -2,9 +2,9 @@ package com.capitalgainscli.processor
 
 import com.capitalgainscli.dtos.OperationInput
 import com.capitalgainscli.stubs.zeroTaxValue
+import org.junit.jupiter.api.Test
 import java.math.BigDecimal
 import kotlin.test.assertEquals
-import org.junit.jupiter.api.Test
 
 class CapitalGainProcessorTest {
     @Test

@@ -3,10 +3,10 @@ package com.capitalgainscli.processor.command
 import com.capitalgainscli.dtos.OperationInput
 import com.capitalgainscli.processor.CapitalGainsProcessor
 import com.capitalgainscli.stubs.zeroTaxValue
-import java.math.BigDecimal
-import kotlin.test.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import java.math.BigDecimal
+import kotlin.test.assertEquals
 
 class SellCommandTest {
 

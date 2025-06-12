@@ -2,8 +2,8 @@ package com.capitalgainscli.processor.strategy
 
 import com.capitalgainscli.dtos.TaxResult
 import com.capitalgainscli.stubs.zeroTaxValue
-import kotlin.test.assertEquals
 import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
 
 class NoTaxStrategyTest {
     @Test

@@ -2,9 +2,9 @@ package com.capitalgainscli.processor.strategy
 
 import com.capitalgainscli.processor.CapitalGainsProcessor
 import com.capitalgainscli.stubs.zeroTaxValue
+import org.junit.jupiter.api.Test
 import java.math.BigDecimal
 import kotlin.test.assertEquals
-import org.junit.jupiter.api.Test
 
 class LossStrategyTest {
     @Test

@@ -1,9 +1,11 @@
 val jacksonVersion: String = "2.19.0"
 val mockkVersion: String = "1.14.2"
+val detektVersion: String = "1.23.5"
 
 plugins {
     kotlin("jvm") version "2.1.20"
     id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("io.gitlab.arturbosch.detekt") version "1.23.5"
 }
 
 group = "com.capitalgainscli"
@@ -19,6 +21,9 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
 
     testImplementation("io.mockk:mockk:$mockkVersion")
+
+    detekt("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
+    detekt("io.gitlab.arturbosch.detekt:detekt-cli:$detektVersion")
 }
 
 tasks.test {
@@ -47,4 +52,9 @@ tasks {
     jar {
         enabled = false
     }
+}
+
+detekt {
+    toolVersion = detektVersion
+    autoCorrect = true
 }
